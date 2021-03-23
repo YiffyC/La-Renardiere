@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>>  <bold>🜏</bold>  </title>
+
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script type="text/javascript">
+
+		function startClock() {
+			var now = new Date();
+			var hor = now.getHours() < 10 ? '0' + now.getHours() : now.getHours();
+			var min = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
+			document.getElementById('liveClock').innerHTML = hor + '<span>:</span>' + min;
+			// : inside span to select it in the css to make it blink
+			var reWrite = setTimeout(startClock, 1000);
+		}
+
+	</script>
+
+</head>
+<body onload="startClock()">
+
+	<div id="blackout"></div>
+	<span id="escape">[ESC] To Return</span>
+	<span id="instructionsToggle" onclick="helpToggle()">[H]</span>
+	<span id="instructions">
+		<div>
+			<table>
+				<tr>
+					<td><kbd>h</kbd></td>
+					<td>Toggle Help</td>
+				</tr>
+				<tr>
+					<td><kbd>Esc</kbd></td>
+					<td>Return to blocks</td>
+				</tr>
+				<tr>
+					<td><kbd>zd</kbd><kbd>↑</kbd></td>
+					<td>Move Up</td>
+				</tr>
+				<tr>
+					<td><kbd>s</kbd><kbd>↓</kbd></td>
+					<td>Move Down</td>
+				</tr>
+				<tr>
+					<td><kbd>q</kbd><kbd>←</kbd></td>
+					<td>Move Left</td>
+				</tr>
+				<tr>
+					<td><kbd>d</kbd><kbd>→</kbd></td>
+					<td>Move Right</td>
+				</tr>
+				<tr>
+					<td><kbd>Space</kbd></td>
+					<td>Focus Search</td>
+				</tr>
+			</table>
+		</div>
+	</span>
+
+	<div id="grid">
+
+		<table>
+
+			<tr>
+				<td>
+					<a href="https://www.youtube.com/feed/subscriptions" id="1" class="lBox">
+						<img src="src/yt.png">
+						<h3>YOUTUBE</h3>
+						<p>L'ennui sans limite</p>
+					</a>
+				</td>
+				<td>
+					<a href="https://www.mega.nz" id="2" class="lBox">
+						<img src="src/mg.png">
+						<h3>MEGA</h3>
+						<p>Toujours plus</p>
+					</a>
+				</td>
+				<td>
+					<a href="https://beta.protonmail.com/" id="3" class="lBox">
+						<img src="src/pm.png">
+						<h3>Protonmail</h3>
+						<p>L33T M41L</p>
+					</a>
+				</td>
+				<td>
+					<a href="https://www.geoguessr.com/" id="4" class="lBox">
+						<img src="src/gg.png">
+						<h3>GEOGUESSR</h3>
+						<p>Geomerding</p>
+					</a>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td>
+					<a href="https://boards.4chan.org/wg/" id="5" class="lBox">
+						<img src="src/4c.png">
+						<h3>4CHAN</h3>
+						<p>/wg/ is mostly SFW</p>
+					</a>
+				</td>
+				<td>
+					<a href="https://github.com/YiffyC" id="6" class="lBox">
+						<img src="src/gh.png">
+						<h3>GitHub</h3>
+						<p>/YiffyC</p>
+					</a>
+				</td>
+				<td>
+					<a href="https://www.reddit.com/r/Schizoid/" id="7" class="lBox">
+						<img src="src/rd.png">
+						<h3>REDDIT</h3>
+						<p>Schizoïde version</p>
+					</a>
+				</td>
+				<td>
+					<a href="https://mail.zoho.eu/zm/" id="8" class="lBox">
+						<img src="src/zm.png">
+						<h3>ZOHO MAIL</h3>
+						<p>Someone else's botnet.</p>
+					</a>
+				</td>
+			</tr>
+
+
+		</table>
+
+	</div>
+
+	<footer>
+
+		<form action="https://google.com/search" method="get">
+			<input type="text" name="q" placeholder="[Space] to search" id="search" autocomplete="off">
+		</form>
+
+		<div id="liveClock"></div>
+
+	</footer>
+
+</body>
+<script type="text/javascript" src="keys.js"></script>
+</html>
