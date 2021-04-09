@@ -48,6 +48,7 @@ kbd {
 }
 span#instructionsToggle {
 	background-color: var(--background-alt);
+	text-align: center;
 	transition: .5s opacity;
 	border-radius: 30px;
 	position: absolute;
@@ -102,6 +103,33 @@ span#escape {
 	width: 100%;
 	top: 130px;
 	opacity: 0;
+}
+
+.weather-container {
+	background-color: var(--background-alt);
+	transition: .5s opacity;
+	text-align: center;
+	height:48px;
+	border-radius: 30px;
+	position: absolute;
+	font-weight: bold;
+	color: #60B48A;
+	padding: 10px;
+	margin: 10px;
+	opacity: .5;
+	z-index: 1;
+	left: 0px;
+	top: 0px;
+}
+
+.location {
+	float: right;
+	text-align: center;
+}
+
+.temperature-value {
+	float:left;
+	text-align: center;
 }
 div#grid {
 	margin-left: -570px;
