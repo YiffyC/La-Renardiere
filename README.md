@@ -45,6 +45,10 @@ To make a new image for the block, the ones I used are 75x75 pixels and 72ppi, a
 ### API calling
 
 The `randomword.js` script contains the call of the random word + it's definition. The API used is [Random Word API](https://github.com/mcnaveen/Random-Words-API) from @mcnaveen
+![image](https://user-images.githubusercontent.com/22780248/114360178-09091080-9b75-11eb-9513-84af4a77ceb5.png)
+
+
+
 
 The Weather API is openweathermaps and is using the current location and does not display weather for a fix location.
 ```javascript
@@ -61,6 +65,8 @@ The Weather API is openweathermaps and is using the current location and does no
 	};
 ```
 
+![image](https://user-images.githubusercontent.com/22780248/114360227-14f4d280-9b75-11eb-8564-06b4beeddae1.png)
+
 
 It will need your openweathermap API key in `weather.js` at line `17` : 
 ```javascript
@@ -72,3 +78,6 @@ const key = "YOURKEY";
 * The current tile will stay highlighted when the mouse hovers another tile ![image](https://user-images.githubusercontent.com/22780248/114357539-238dba80-9b72-11eb-825c-fa3132c79035.png)
 
 * Improve mobile browser display
+
+### *Todolist*
+* Add weather icon depending of sky status
