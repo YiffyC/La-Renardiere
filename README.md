@@ -1,7 +1,7 @@
-# Decaux
-### A material style, keyboard friendly and easily customizable startpage.
+# La renardière
+### Keyboard friendly startpage, inspired from DECAUX
 
-![Demo Image](https://u.teknik.io/gHzZf.png)
+![image](https://user-images.githubusercontent.com/22780248/114354919-23d88680-9b6f-11eb-9907-54f8aa928f2b.png)
 
 <div align="center">
 	<h3><a href="https://decaux.capuno.cat/">Live Demo</a></h3>
@@ -12,8 +12,8 @@
 |Key|Command|
 |:-:|---|
 |`h`| Show Help |
-|`w` `↑`| Move Up |
-|`a` `←`| Move Left |
+|`z` `↑`| Move Up |
+|`q` `←`| Move Left |
 |`s` `↓`| Move Down |
 |`d` `→`| Move Right |
 |`Space`| Focus Search |
@@ -21,7 +21,7 @@
 
 ### Customization
 
-Colors in lines `12-14` inside `style.css`.
+Inside `style.css`.
 
 Link blocks are in lines `69-128` inside `index.html`, the syntax for the links is the following:
 
@@ -40,3 +40,35 @@ Link blocks are in lines `69-128` inside `index.html`, the syntax for the links 
 For the moment, there is only possible to have 8 blocks in 2 lines of 4 blocks, so if you want to add your links, just edit the ones already in there.
 
 To make a new image for the block, the ones I used are 75x75 pixels and 72ppi, and are inside the `src/` folder
+
+
+### API calling
+
+The `randomword.js` script contains the call of the random word + it's definition. The API used is [Random Word API](https://github.com/mcnaveen/Random-Words-API) from @mcnaveen
+
+The Weather API is openweathermaps and is using the current location and does not display weather for a fix location.
+```javascript
+    function setPosition(position){  
+        let latitude = position.coords.latitude;  
+        let longitude = position.coords.longitude;  
+	};
+```
+ If you want to use fix location, replace `position.coords.latitude` and `position.coords.longitude` with fixed values instead of calling them from the API. :
+ ```javascript
+    function setPosition(position){  
+        let latitude = 48.856614;  
+        let longitude = 2.3522219;  
+	};
+```
+
+
+It will need your openweathermap API key in `weather.js` at line `17` : 
+```javascript
+const key = "YOURKEY";
+```
+
+### *Known issues*
+
+* The current tile will stay highlighted when the mouse hovers another tile ![image](https://user-images.githubusercontent.com/22780248/114357539-238dba80-9b72-11eb-825c-fa3132c79035.png)
+
+* Improve mobile browser display
