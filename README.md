@@ -81,3 +81,4 @@ const key = "YOURKEY";
 
 ### *Todolist*
 * Add weather icon depending of sky status
+* Clean code owo
