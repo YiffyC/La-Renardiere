@@ -4,7 +4,7 @@
 ![image](https://user-images.githubusercontent.com/22780248/114354919-23d88680-9b6f-11eb-9907-54f8aa928f2b.png)
 
 <div align="center">
-	<h3><a href="https://decaux.capuno.cat/">Live Demo</a></h3>
+	<h3><a href="https://bthevenet.heb3.org/home/">Live Demo</a></h3>
 </div>
 
 ### Usage
