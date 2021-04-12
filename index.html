@@ -2,8 +2,9 @@
 <html>
 <head>
 
-	<title>>  <bold>🜏</bold>  </title>
-
+	<title>&#129418; La Renardière &#129418;</title>
+	<!--<title id ="rdmTitle" >&#128783;&nbsp;&#128783;&nbsp;&#128783;&nbsp;&#128783;&nbsp;&#128783;</title>
+-->
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -24,43 +25,42 @@
 </head>
 <body onload="startClock()">
 
+
+
 	<div id="blackout"></div>
-	<span id="escape">[ESC] To Return</span>
-	<span id="instructionsToggle" onclick="helpToggle()">[H]</span>
-	<span id="instructions">
-		<div>
-			<table>
-				<tr>
-					<td><kbd>h</kbd></td>
-					<td>Toggle Help</td>
-				</tr>
-				<tr>
-					<td><kbd>Esc</kbd></td>
-					<td>Return to blocks</td>
-				</tr>
-				<tr>
-					<td><kbd>zd</kbd><kbd>↑</kbd></td>
-					<td>Move Up</td>
-				</tr>
-				<tr>
-					<td><kbd>s</kbd><kbd>↓</kbd></td>
-					<td>Move Down</td>
-				</tr>
-				<tr>
-					<td><kbd>q</kbd><kbd>←</kbd></td>
-					<td>Move Left</td>
-				</tr>
-				<tr>
-					<td><kbd>d</kbd><kbd>→</kbd></td>
-					<td>Move Right</td>
-				</tr>
-				<tr>
-					<td><kbd>Space</kbd></td>
-					<td>Focus Search</td>
-				</tr>
-			</table>
-		</div>
-	</span>
+
+	  <div class="weather-container">    
+             <!-- <div class="weather-icon">    
+                <img src="src/weather/7.png" alt="">    
+              
+            <div class="temperature-value">    
+                <p>- °<span>C</span></p>    
+            </div>    
+            <div class="temperature-description">    
+                <p> - </p>    
+            </div>    
+            <div class="location">    
+                <p>-</p>    
+            </div> -->  
+            <div class="temperature-value">    
+                <p>- °<span>C,</span>&nbsp;</p>    
+            </div>  
+            <div class="location">    
+                <p>-</p>    
+            </div>
+        </div>
+
+
+
+
+        <div id="quote">
+
+        	<div id="droite"></div>
+        	<div id="gauche"></div>
+        	
+        </div>    
+
+
 
 	<div id="grid">
 
@@ -117,14 +117,14 @@
 					<a href="https://www.reddit.com/r/Schizoid/" id="7" class="lBox">
 						<img src="src/rd.png">
 						<h3>REDDIT</h3>
-						<p>Schizoïde version</p>
+						<p>Schizoïde</p>
 					</a>
 				</td>
 				<td>
-					<a href="https://mail.zoho.eu/zm/" id="8" class="lBox">
-						<img src="src/zm.png">
-						<h3>ZOHO MAIL</h3>
-						<p>Someone else's botnet.</p>
+					<a href="https://skiley.net/" id="8" class="lBox">
+						<img src="src/s.png">
+						<h3>Skiley</h3>
+						<p>Musique et stat 🜏</p>
 					</a>
 				</td>
 			</tr>
@@ -141,9 +141,12 @@
 		</form>
 
 		<div id="liveClock"></div>
-
 	</footer>
 
 </body>
 <script type="text/javascript" src="keys.js"></script>
+<script type="text/javascript" src="weather.js"></script>
+<script type="text/javascript" src="randomword.js"></script>
 </html>
+					
+		
