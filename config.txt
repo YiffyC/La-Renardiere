@@ -1,0 +1,32 @@
+# This file is used as an alternative if ux0:tai/config.txt is not found.
+# For users plugins, you must refresh taiHEN from HENkaku Settings for
+# changes to take place.
+# For kernel plugins, you must reboot for changes to take place.
+*KERNEL
+ur0:tai/kubridge.skprx
+ur0:tai/fd_fix.skprx
+ur0:tai/gamesd.skprx
+ur0:tai/storagemgr.skprx
+ur0:tai/gamesd.skprx
+ur0:tai/repatch.skprx
+ux0:app/PSPEMUCFW/sce_module/adrenaline_kernel.skprx
+ur0:tai/nonpdrm.skprx
+ur0:tai/vitabright.skprx
+ur0:tai/ds4vita.skprx
+ur0:tai/lolicon.skprx
+ur0:tai/udcd_uvc.skprx
+# henkaku.skprx is hard-coded to load and is not listed here
+# main is a special titleid for SceShell
+ur0:tai/henkaku.suprx
+*NPXS10015
+# this is for modifying the version string
+ur0:tai/henkaku.suprx
+*NPXS10016
+# this is for modifying the version string in settings widget
+ur0:tai/henkaku.suprx
+*main
+ur0:tai/shellsecbat.suprx
+ur0:tai/custom_warning.suprx
+ur0:tai/download_enabler.suprx
+*ALL
+ur0:tai/Framecounter.suprx
