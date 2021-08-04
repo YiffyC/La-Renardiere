@@ -283,11 +283,11 @@ footer form input[type="text"]:focus::-moz-placeholder {
 
 
 /** Buttons **/
-.btn {
+.btn, .fox {
   background-color: transparent;
   border-radius: 2em;
-  border: 0.2em solid #1ecd97;
-  color: #1ecd97;
+  /*border: 0.2em solid #1ecd97;*/
+  color: #60B48A;
   cursor: pointer;
   font-size: 3vmin;
   padding: 0.7em 1.5em;
@@ -296,13 +296,24 @@ footer form input[type="text"]:focus::-moz-placeholder {
 }
 
 .btn:hover {
-  background: #1ecd97;
-  color: #333;
+  background: #60B48A;
+  color: #333444;
+}
+
+.btn:onclick {
+	border : 0.2em solid #742726;
+}
+
+.fox:active
+{
+	border : 0.2em solid #742726;*/
+	
 }
 
 .btn--login {
   margin: 0 auto;
 }
+
 
 /** Now Playing **/
 .now-playing__name {
