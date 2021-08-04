@@ -1,13 +1,13 @@
 # La renardière
 ### Keyboard friendly startpage, inspired from DECAUX
 
-![image](https://user-images.githubusercontent.com/22780248/114354919-23d88680-9b6f-11eb-9907-54f8aa928f2b.png)
+![image](https://user-images.githubusercontent.com/22780248/128182738-9bc41ba3-22cf-47a3-a941-ca286c3b02cc.png)
 
 <div align="center">
 	<h3><a href="https://bthevenet.heb3.org/home/">Live Demo</a></h3>
 </div>
 
-### Usage
+# Usage
 
 |Key|Command|
 |:-:|---|
@@ -19,11 +19,11 @@
 |`Space`| Focus Search |
 |`Esc`| Back to Blocks |
 
-### Customization
+# Customization
 
 Inside `style.css`.
 
-Link blocks are in lines `69-128` inside `index.html`, the syntax for the links is the following:
+Link blocks are inside `index.html`, the syntax for the links is the following:
 
 ```html
 <td>
@@ -42,14 +42,15 @@ For the moment, there is only possible to have 8 blocks in 2 lines of 4 blocks, 
 To make a new image for the block, the ones I used are 75x75 pixels and 72ppi, and are inside the `src/` folder
 
 
-### API calling
+## API calling
 
+### Randomword
 The `randomword.js` script contains the call of the random word + it's definition. The API used is [Random Word API](https://github.com/mcnaveen/Random-Words-API) from @mcnaveen
 ![image](https://user-images.githubusercontent.com/22780248/114360178-09091080-9b75-11eb-9513-84af4a77ceb5.png)
 
 
 
-
+### Weather
 The Weather API is openweathermaps and is using the current location and does not display weather for a fix location.
 ```javascript
     function setPosition(position){  
@@ -73,7 +74,89 @@ It will need your openweathermap API key in `weather.js` at line `17` :
 const key = "YOURKEY";
 ```
 
-### *Known issues*
+## Spotify Now Playing Integration
+Shows what's currently playing in Spotify. Inspired by the work of [José Manuel Pérez](https://codepen.io/jmperez/pen/MmwObE)
+### Usage 
+First login with your spotify account by clicking on the button
+![image](https://user-images.githubusercontent.com/22780248/128183333-5902d81d-d094-4624-b346-ba7a01cbee50.png)
+
+### Login issues
+While login you may encounter issues :
+
+* The popup is not showing : allow popup for the site
+* The popup immediately close when it opens : be sure you have no extentions blocking the popup or it's connection. For some reason you can browse in private tab, log in and comming back on normal tab and magic happens
+
+
+### Remove now playing
+If you want to remove the spotify integration, you have to remove `spoty.js` and the following code in `index.html`:
+
+```html
+<div class="container">
+    <div class="login-container hidden" id="js-login-container">
+      <a hrf='https://spotify-player.herokuapp.com/login?scope=user-read-playback-state'><button class="btn btn--login" id="js-btn-login">Login with Spotify</button></a>
+    </div>
+    <div class="main-container hidden" id="js-main-container"></div>
+</div>
+```
+and :
+
+```html
+<script type="text/javascript" src="spoty.js"></script>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch'></script>
+<script src='https://spotify-player.herokuapp.com/spotify-player.js'></script>
+<script id="rendered-js" >
+var mainContainer = document.getElementById('js-main-container'),
+loginContainer = document.getElementById('js-login-container'),
+loginButton = document.getElementById('js-btn-login'),
+background = document.getElementById('js-background');
+
+var spotifyPlayer = new SpotifyPlayer();
+
+var template = function (data) {
+  return `
+    <div class="main-wrapper">
+      <div class="now-playing__img">
+        <img src="${data.item.album.images[0].url}">
+      </div>
+      <div class="now-playing__side">
+        <div class="now-playing__name">${data.item.name}</div>
+        <div class="now-playing__artist">${data.item.artists[0].name}</div>
+        <div class="now-playing__status">${data.is_playing ? 'Playing' : 'Paused'}</div>
+        <div class="progress">
+          <div class="progress__bar" style="width:${data.progress_ms * 100 / data.item.duration_ms}%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="background" style="background-image:url(${data.item.album.images[0].url})"></div>
+  `;
+};
+
+spotifyPlayer.on('update', response => {
+  mainContainer.innerHTML = template(response);
+});
+
+spotifyPlayer.on('login', user => {
+  if (user === null) {
+    loginContainer.style.display = 'block';
+    mainContainer.style.display = 'none';
+  } else {
+    loginContainer.style.display = 'none';
+    mainContainer.style.display = 'block';
+  }
+});
+
+loginButton.addEventListener('click', () => {
+  spotifyPlayer.login();
+});
+
+spotifyPlayer.init();
+//# sourceURL=pen.js
+    </script>```
+
+
+
+
+# *Known issues*
 
 * The current tile will stay highlighted when the mouse hovers another tile ![image](https://user-images.githubusercontent.com/22780248/114357539-238dba80-9b72-11eb-825c-fa3132c79035.png)
 
