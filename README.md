@@ -151,7 +151,8 @@ loginButton.addEventListener('click', () => {
 
 spotifyPlayer.init();
 //# sourceURL=pen.js
-    </script>```
+    </script>
+```
 
 
 
