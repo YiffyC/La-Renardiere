@@ -77,8 +77,8 @@ const key = "YOURKEY";
 ## Spotify Now Playing Integration
 Shows what's currently playing in Spotify. Inspired by the work of [José Manuel Pérez](https://codepen.io/jmperez/pen/MmwObE)
 ### Usage 
-First login with your spotify account by clicking on the button
-![image](https://user-images.githubusercontent.com/22780248/128183333-5902d81d-d094-4624-b346-ba7a01cbee50.png)
+First login with your spotify account by clicking on the fox emoji
+![image](https://user-images.githubusercontent.com/22780248/130411157-66d4e2ce-5bf2-4b1b-a6db-4b2255027f37.png)
 
 ### Login issues
 While login you may encounter issues :
