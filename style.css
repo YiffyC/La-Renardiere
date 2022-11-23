@@ -11,7 +11,7 @@
 :root {
 	--background-alt: #26221F;
 	--background: #211D1B;
-	--base-txt: #4D6358;
+	--base-txt: /*#4D6358*/red;
 }
 ::-webkit-input-placeholder {
     opacity: 1 !important;
