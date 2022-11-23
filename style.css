@@ -402,3 +402,13 @@ footer form input[type="text"]:focus::-moz-placeholder {
 .main-container {
   flex: 1;
 }
+
+.grad {
+	text-transform: uppercase;
+	background: linear-gradient(to right, #0064ff, #00a0ff, #00c6eb, #00df87, #a8eb12);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font: {
+		size: 20vw;
+		family: $font;
+	}};
