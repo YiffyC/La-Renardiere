@@ -54,9 +54,11 @@
         </div>
         <!-- WIP  -->
           <div class="container">
-    <div class="login-container hidden" id="js-login-container">
+
+	<!-- SPOTIFY INTEGRATION IS REMOVED DUE TO API DEPRECATION-->
+    <!--<div class="login-container hidden" id="js-login-container">
       <a hrf='https://spotify-player.herokuapp.com/login?scope=user-read-playback-state'><div class="fox btn btn--login" id="js-btn-login">&#129418</div></a>
-    </div>
+    </div>-->
     <div class="main-container hidden" id="js-main-container"></div>
 </div>
 
@@ -158,6 +160,7 @@
 <script type="text/javascript" src="randomword.js"></script>
 <script type="text/javascript" src="spoty.js"></script>
 <script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch'></script>
+<!-- spotify player is deprecated
 <script src='https://spotify-player.herokuapp.com/spotify-player.js'></script>
 <script id="rendered-js" >
 var mainContainer = document.getElementById('js-main-container'),
@@ -207,4 +210,5 @@ loginButton.addEventListener('click', () => {
 spotifyPlayer.init();
 //# sourceURL=pen.js
     </script>
+-->
 </html>
