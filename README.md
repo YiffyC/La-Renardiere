@@ -74,20 +74,34 @@ It will need your openweathermap API key in `weather.js` at line `17` :
 const key = "YOURKEY";
 ```
 
-## Spotify Now Playing Integration
+
+# *Known issues*
+
+* The current tile will stay highlighted when the mouse hovers another tile ![image](https://user-images.githubusercontent.com/22780248/114357539-238dba80-9b72-11eb-825c-fa3132c79035.png)
+
+* Improve mobile browser display
+
+* Spotify Now Playis is being deprecated and is no longer working
+
+### *Todolist*
+[] Add weather icon depending of sky status
+[] Clean code owo
+[x] Remove Spotify Integration - deprecated
+
+#### Old spotify doc
 Shows what's currently playing in Spotify. Inspired by the work of [José Manuel Pérez](https://codepen.io/jmperez/pen/MmwObE)
-### Usage 
+##### Usage 
 First login with your spotify account by clicking on the fox emoji
 ![image](https://user-images.githubusercontent.com/22780248/130411157-66d4e2ce-5bf2-4b1b-a6db-4b2255027f37.png)
 
-### Login issues
+##### Login issues
 While login you may encounter issues :
 
 * The popup is not showing : allow popup for the site
 * The popup immediately close when it opens : be sure you have no extentions blocking the popup or it's connection. For some reason you can browse in private tab, log in and comming back on normal tab and magic happens
 
-
-### Remove now playing
+~~~~
+##### Spotify now plaing
 If you want to remove the spotify integration, you have to remove `spoty.js` and the following code in `index.html`:
 
 ```html
@@ -153,16 +167,4 @@ spotifyPlayer.init();
 //# sourceURL=pen.js
     </script>
 ```
-
-
-
-
-# *Known issues*
-
-* The current tile will stay highlighted when the mouse hovers another tile ![image](https://user-images.githubusercontent.com/22780248/114357539-238dba80-9b72-11eb-825c-fa3132c79035.png)
-
-* Improve mobile browser display
-
-### *Todolist*
-* Add weather icon depending of sky status
-* Clean code owo
+~~~~
