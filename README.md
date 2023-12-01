@@ -1,5 +1,6 @@
-# La renardière
+#[DEPRECATED] La renardière
 ### Keyboard friendly startpage, inspired from DECAUX
+The project is deprecated. Spotify API does not work anymore. too much work to move to responsive
 
 ![image](https://user-images.githubusercontent.com/22780248/128182738-9bc41ba3-22cf-47a3-a941-ca286c3b02cc.png)
 
